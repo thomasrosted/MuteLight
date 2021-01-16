@@ -21,8 +21,7 @@ jobs:
       - name: Build
         run: msbuild src\MuteLight.sln -p:Configuration=Release
       - name: Zip
-        run: |
-          zip -r MuteLight.zip src\MuteLight\bin\Release\
+        run: Compress-Archive -Path src\MuteLight\bin\Release\ -DestinationPath MuteLight.zip
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
