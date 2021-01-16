@@ -1,10 +1,5 @@
 name: CI Build
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  workflow_dispatch:
+on: [push, pull_request, workflow_dispatch]  
 jobs:
   build:
     runs-on: windows-latest
